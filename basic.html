@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript basics</title>
+</head>
+
+<body>
+    <h1>Javascript basics</h1>
+    <ul>
+        <li>Spring</li>
+        <li>Summer</li>
+        <li>Fall</li>
+        <li>Winter</li>
+    </ul>
+    <script>
+      //POO
+      /*
+      Class
+      Objects
+        attributes
+        methods
+      */
+
+      class Animal{
+        constructor(name, gender){
+          this.name = name;
+          this.gender = gender;
+        }
+
+        noise(){
+          console.log("I'm alive");
+        }
+        gretting(){
+        console.log(`Hello, my name is ${this.name}`);
+        }
+
+      }
+
+      class Dog extends Animal{
+        constructor(name,gender,size){
+          super(name,gender);
+          this.size = size;
+          this.race = null;
+        }
+        
+        gretting = function(){
+        console.log("I'm a dog");
+        }
+
+        barking = function(){
+        console.log("Guagugua")
+        }
+
+        //a static method can be used without needing to instantiate a class
+
+        static what(){
+          console.log("safvjhajnvfñavnjfafdjfffffffffffffffffffffffffffffffffffffffffffffffkkdjnfvjnvf");
+
+
+        }
+        get getRace(){
+        return this.race;
+        }
+
+        set setRace(race){
+          this.race = race;
+        }
+
+      }
+
+
+
+      Dog.what();
+
+      const mimi = new Animal("Mimi", "female");
+      const scooby = new Dog("Scooby", "male", "Giga");
+
+      console.log(mimi);
+      mimi.noise();
+      mimi.gretting();
+      console.log(scooby);
+      scooby.noise();
+      scooby.gretting();
+      console.log(scooby.getRace);
+      scooby.setRace = "New";
+      console.log(scooby.getRace);
+    </script>
+</body>
+
+</html>
